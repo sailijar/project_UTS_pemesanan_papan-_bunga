@@ -10,8 +10,8 @@ Route::get('admin/barang', function () {
     return view('admin.barang');
 })->name('barang');
 
-Route::get('admin/pemesanan', function () {
-    return view('admin.pemesanan');
+Route::get('admin/pesanan', function () {
+    return view('admin.pesanan');
 })->name('pesanan');
 
 Route::get('admin/transaksi', function () {

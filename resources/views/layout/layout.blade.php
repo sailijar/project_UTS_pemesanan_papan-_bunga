@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UD FAJAR SURYA - Dashboard</title>
+    <title >UD FAJAR SURYA - Dashboard</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -49,10 +49,11 @@
                 <h3>UD FAJAR SURYA</h3>
                 <p>Nama Admin</p>
                 <hr>
-                <a href="{{ route('dashboard') }}">Dashboard</a>
-                <a href="{{ route('barang') }}">Barang</a>
-                <a href="{{ route('pesanan') }}">Pesanan</a>
-                <a href="{{ route('transaksi') }}">Transaksi</a>
+                <a href="/admin/dashboard">Dashboard</a>
+                <a href="/admin/barang">Barang</a>
+                <a href="/admin/pesanan">Pesanan</a>
+                <a href="/admin/transaksi">Transaksi</a>
+
             </div>
 
             <!-- Main Content -->
