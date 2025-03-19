@@ -14,12 +14,12 @@
             background-color: #f8f9fa;
         }
         .sidebar {
-            height: 100vh; /* Full height */
-            width: 250px; /* Lebar sidebar */
-            background-color: #007bff; /* Warna biru */
+            height: 100vh;
+            width: 250px;
+            background-color: #007bff;
             color: white;
             padding: 20px;
-            position: fixed; /* Sidebar tetap */
+            position: fixed;
             top: 0;
             left: 0;
         }
@@ -31,11 +31,11 @@
             margin: 5px 0;
         }
         .sidebar a:hover {
-            background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+            background-color: #0056b3;
             border-radius: 5px;
         }
         .main-content {
-            margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+            margin-left: 250px;
             padding: 20px;
         }
         .card {
