@@ -13,10 +13,22 @@
         body {
             background-color: #f8f9fa;
         }
+        .profile-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            margin: 10px auto;
+            font-size: 2rem;
+        }
         .sidebar {
             height: 100vh;
             width: 250px;
-            background-color: #007bff;
+            background-color: #0270e4;
             color: white;
             padding: 20px;
             position: fixed;
@@ -46,13 +58,24 @@
             background-color: #007bff;
             color: white;
         }
+
     </style>
 </head>
 <body>
+
+</body>
+
     <!-- Sidebar -->
     <div class="sidebar">
-        <h3>UD FAJAR SURYA</h3>
-        <p>Nama Admin</p>
+        <h4>UD FAJAR SURYA</h4>
+        <hr>
+        <!-- Ikon Profil di Tengah -->
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <p class="text-center">Admin</p>
+
+
         <hr>
         <a href="{{ route('dashboard') }}">
             <i class="fas fa-tachometer-alt"></i> Dashboard

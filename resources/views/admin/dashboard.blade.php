@@ -2,9 +2,11 @@
 
 @section('title','dashboard')
 @section('content')
+
+
+
     <h2>Dashboard</h2>
     <hr>
-
     <!-- Kartu Statistik -->
     <div class="row">
         <div class="col-md-4">
