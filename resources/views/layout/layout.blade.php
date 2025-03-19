@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>UD FAJAR SURYA</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -11,28 +11,23 @@
         body {
             background-color: #f8f9fa;
         }
-        .sidebar {
-            height: 100vh;
-            background-color: #212223;
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .footer {
+            background-color: #007bff;
             color: white;
-            padding: 20px;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            margin: 5px 0;
-        }
-        .sidebar a:hover {
-            background-color: #3f4448;
-            border-radius: 5px;
-        }
-        .main-content {
-            padding: 20px;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
         .card {
-            margin-bottom: 20px;
+            margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .card-header {
@@ -41,31 +36,41 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-md-2 sidebar">
-                <h3>UD FAJAR SURYA</h3>
-                <p>Nama Admin</p>
-                <hr>
-                <a href="/admin/dashboard">Dashboard</a>
-                <a href="/admin/barang">Barang</a>
-                <a href="/admin/pesanan">Pesanan</a>
-                <a href="/admin/transaksi">Transaksi</a>
-
-            </div>
-
-            <!-- Main Content -->
-            <div class="col-md-9 main-content">
-                @yield('content')
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">UD FAJAR SURYA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('barang') }}">Barang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pesanan') }}">Pesanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('transaksi') }}">Transaksi</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        @yield('content')
     </div>
 
-    <footer class="fixed-bottom bg-dark text-white py-2 mt-4 text-center">
-        Copyright &copy; Mhd.Sailijar Dirya - 2025
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 UD FAJAR SURYA. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS -->
