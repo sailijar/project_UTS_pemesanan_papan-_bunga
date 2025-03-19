@@ -12,15 +12,11 @@ Route::post('/login', function (Request $request) {
     } else {
         return redirect()->route('landing')->with('error', 'Username atau password salah');
     }
-
-
 })->name('login');
-// Halaman Landing Page
 Route::get('/', function () {
     return view('landing');
 })->name('landing');
 
-// Proses Login
 Route::post('/login', function () {
     // Proses validasi login (bisa disesuaikan dengan kebutuhan)
     return redirect()->route('dashboard');
@@ -31,7 +27,7 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
-// Halaman Barang, Pesanan, Transaksi (sesuai project sebelumnya)
+// Halaman Barang, Pesanan, Transaksi
 Route::get('/barang', function () {
     return view('admin.barang');
 })->name('barang');
