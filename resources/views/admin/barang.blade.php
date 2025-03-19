@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@section('title','Barang')
+
 @section('content')
     <h2>Data Barang</h2>
     <div class="btn-group" role="group" aria-label="Basic example">

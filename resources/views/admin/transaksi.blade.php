@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@section('title','Transaksi')
+
 @section('content')
     <h2>Transaksi Penjualan</h2>
     <form class="d-flex" role="search">
