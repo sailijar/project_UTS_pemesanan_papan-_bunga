@@ -26,7 +26,7 @@
             <td>Otto</td>
             <td>@mdo</td>
             <td>@mdo</td>
-            <td>@mdo</td>
+            <td><i class="fa-solid fa-trash"> Hapus</i></td>
 
           </tr>
           <tr>

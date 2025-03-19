@@ -4,9 +4,11 @@
 
 @section('content')
     <h2>Data Barang</h2>
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <span class="float-end"><a class="btn btn-primary" href="">
+        <i class="fa-solid fa-square-plus"></i> Tambah Data</a></span>
+    {{-- <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-primary">Tambah Data</button>
-      </div>
+      </div> --}}
     <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

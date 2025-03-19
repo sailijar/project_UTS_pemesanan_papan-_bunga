@@ -13,7 +13,7 @@
         }
         .sidebar {
             height: 100vh;
-            background-color: #007bff;
+            background-color: #212223;
             color: white;
             padding: 20px;
         }
@@ -25,7 +25,7 @@
             margin: 5px 0;
         }
         .sidebar a:hover {
-            background-color: #0056b3;
+            background-color: #3f4448;
             border-radius: 5px;
         }
         .main-content {
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <footer class="fixed-bottom bg-primary text-white py-2 mt-4 text-center">
+    <footer class="fixed-bottom bg-dark text-white py-2 mt-4 text-center">
         Copyright &copy; Mhd.Sailijar Dirya - 2025
     </footer>
 
