@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UD FAJAR SURYA</title>
+     <!-- FontAwesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -11,23 +13,33 @@
         body {
             background-color: #f8f9fa;
         }
-        .navbar {
-            background-color: #007bff;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        .footer {
-            background-color: #007bff;
+        .sidebar {
+            height: 100vh; /* Full height */
+            width: 250px; /* Lebar sidebar */
+            background-color: #007bff; /* Warna biru */
             color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            position: fixed; /* Sidebar tetap */
+            top: 0;
+            left: 0;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .sidebar a:hover {
+            background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+            border-radius: 5px;
+        }
+        .main-content {
+            margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+            padding: 20px;
         }
         .card {
-            margin-top: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .card-header {
@@ -37,41 +49,29 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">UD FAJAR SURYA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('barang') }}">Barang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pesanan') }}">Pesanan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('transaksi') }}">Transaksi</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="container mt-4">
-        @yield('content')
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>UD FAJAR SURYA</h3>
+        <p>Nama Admin</p>
+        <hr>
+        <a href="{{ route('dashboard') }}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="{{ route('barang') }}">
+            <i class="fas fa-box"></i> Barang
+        </a>
+        <a href="{{ route('pesanan') }}">
+            <i class="fas fa-shopping-cart"></i> Pesanan
+        </a>
+        <a href="{{ route('transaksi') }}">
+            <i class="fas fa-money-bill"></i> Transaksi
+        </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 UD FAJAR SURYA. All rights reserved.</p>
-    </footer>
+    <!-- Main Content -->
+    <div class="main-content">
+        @yield('content')
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

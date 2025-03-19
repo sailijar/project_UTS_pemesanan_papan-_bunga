@@ -1,5 +1,7 @@
 @extends('layout.layout')
 
+@section('title','login')
+
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-6">
