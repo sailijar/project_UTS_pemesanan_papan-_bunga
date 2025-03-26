@@ -19,7 +19,7 @@
             align-items: center;
             width: 50px;
             height: 50px;
-            background-color: #007bff;
+            background-color: #0056b3;
             color: white;
             border-radius: 50%;
             margin: 10px auto;

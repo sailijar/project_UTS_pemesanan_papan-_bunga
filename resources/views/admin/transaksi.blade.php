@@ -7,6 +7,20 @@
     <h2>Transaksi Penjualan</h2>
     <hr>
 
+     <!-- Fitur Pencarian -->
+     <div class="row mb-4">
+        <div class="col-md-6">
+            <form action="{{ route('dashboard') }}" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari..." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Tabel Transaksi -->
     <div class="table-container">
         <table class="table table-bordered">

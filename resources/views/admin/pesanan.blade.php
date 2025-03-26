@@ -5,6 +5,20 @@
     <h2>Data Pesanan</h2>
     <hr>
 
+     <!-- Fitur Pencarian -->
+     <div class="row mb-4">
+        <div class="col-md-6">
+            <form action="{{ route('dashboard') }}" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari..." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Tabel Pesanan -->
     <div class="table-container">
         <table class="table table-bordered">
@@ -16,6 +30,7 @@
                     <th>Tgl Pesan</th>
                     <th>Tgl Antar </th>
                     <th>Keterangan</th>
+                    <th>Tipe</th>
                     <th>Harga</th>
                     <th>Jumlah</th>
                     <th>Aksi</th>
@@ -30,6 +45,7 @@
                         <td>2021-05-24</td>
                         <td>2021-05-24</td>
                         <td>Ucapan selamat kepada sailijar</td>
+                        <td>Besar</td>
                         <td>Rp 300.000</td>
                         <td>{{ $i }}</td>
                         <td>
@@ -47,6 +63,7 @@
                         <td>2021-05-24</td>
                         <td>2021-05-24</td>
                         <td>Ucapan Duka Cita</td>
+                        <td>Kecil</td>
                         <td>Rp 300.000</td>
                         <td>{{ $a }}</td>
                         <td>
